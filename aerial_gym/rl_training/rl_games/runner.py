@@ -87,6 +87,15 @@ env_configurations.register(
     },
 )
 
+# my hover function
+env_configurations.register(
+    "hover_setpoint_task",
+    {
+        "env_creator": lambda **kwargs: task_registry.make_task("hover_setpoint_task", **kwargs),
+        "vecenv_type": "AERIAL-RLGPU",
+    },
+)
+
 env_configurations.register(
     "position_setpoint_task_sim2real",
     {
